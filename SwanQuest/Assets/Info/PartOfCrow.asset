@@ -16,4 +16,4 @@ MonoBehaviour:
   _title: Part of crow
   _descriprion: Some part of crow
   _maxItemInInvetorySlot: 10
-  _spriteIcon: {fileID: 21300000, guid: a5fc61aa5225df2b78246ab80c458c87, type: 3}
+  _spriteIcon: {fileID: 21300000, guid: a5669e21a398e3ed596f5829331f3659, type: 3}
