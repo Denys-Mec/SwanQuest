@@ -1,29 +1,30 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
-public class SleepingBagAnim : MonoBehaviour, IPointerDownHandler
+public class SleepingBagAnim : MonoBehaviour
 {
 
     // private Animator _anim;
-    private bool flag = false;
+
+
+    [SerializeField]
+    public UnityEvent onClick;
 
     // public void Start()
     // {
 	//     _anim = GetComponent<Animator>();
     // }
 
-    public void Interaction()
+
+
+    private void OnMouseDown()
     {
-        flag = !flag;
-        GetComponent<Animator>().SetBool("open", flag);
-        GetComponent<Animator>().SetBool("close", !flag);
+        onClick.Invoke();
+        // this.Interaction();
+        // Debug.Log("Ok");
     }
 
-    public void OnPointerDown(PointerEventData eventData)
-    {
-	   this.Interaction();
-    }
 }
